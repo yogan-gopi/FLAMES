@@ -16,6 +16,7 @@ def printRelation(f):
 
 def calculateRelation(name1, name2):
     f  =['F', 'L', 'A', 'M', 'E', 'S']
+    fLen = len(f)
     name1 = name1.lower()
     name2 = name2.lower()
     name1.replace(" ", "")
@@ -29,9 +30,7 @@ def calculateRelation(name1, name2):
     n = len(name1) + len(name2)
     i = 0
 
-    for _ in range(5):
-        i -= 1
-        fLen = len(f)
+    for _ in range(fLen-2):
         for x in range(n):
             i = ((i+1) % fLen)
         f.pop(i)
