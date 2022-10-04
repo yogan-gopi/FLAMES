@@ -1,18 +1,9 @@
 def printRelation(f):
     global name1, name2
-    prompt = "The Relationship between {} and {} will end in ".format(name1, name2)
-    if f == "F":
-        print(prompt+"FRIENDS!")
-    elif f == "L":
-        print(prompt+"LOVE!")
-    elif f == "A":
-        print(prompt+"AFFECTION!")
-    elif f == "M":
-        print(prompt+"MARRIAGE!")
-    elif f == "E":
-        print(prompt+"ENEMY!")
-    else:
-        print(prompt+"SIBLINGS!")
+    relations = {'F': "FRIENDS!", 'L': "LOVE!", 'A': "AFFECTION!", 'M': "MARRIAGE!", 'E': "ENEMY", 'S': "SISTERS!"}
+    prompt = "The Relationship between {} and {} will end in {}".format(name1, name2, relations[f])
+    print(prompt)
+    
 
 def calculateRelation(name1, name2):
     f  =['F', 'L', 'A', 'M', 'E', 'S']
