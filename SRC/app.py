@@ -6,11 +6,11 @@ class Flames:
     def __init__(self, name1 = "", name2 = ""):
 
         if name1 == name2 == "": # Get names from user if not provided in the Constructor
-            self.name1 = input("Enter Your Name: ")
-            self.name2 = input("Enter Your Crush Name: ")
-        else:
-            self.name1 = name1
-            self.name2 = name2
+            name1 = input("Enter Your Name: ")
+            name2 = input("Enter Your Crush Name: ")
+        
+        self.name1 = name1
+        self.name2 = name2
         
         self.relation = self.calculateRelation()
         self.printRelation()
